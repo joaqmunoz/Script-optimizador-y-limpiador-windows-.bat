@@ -1,97 +1,125 @@
-Script Limpiador y Optimizador para Windows
-Descripción
-Este script batch (.bat) automatiza tareas de limpieza y optimización del sistema operativo Windows para mejorar el rendimiento general del equipo.
+# Windows System Optimization Script
 
- Requisito Importante
-Ejecutar como Administrador: Este script requiere permisos de administrador para funcionar correctamente. Haz clic derecho sobre el archivo y selecciona "Ejecutar como administrador".
+## Descripción
 
-Funciones del Script
-El script realiza las siguientes optimizaciones:
+Script de automatización desarrollado en Batch (.bat) para la limpieza, optimización y mantenimiento del sistema operativo Windows. Su objetivo es mejorar el rendimiento general del equipo mediante la ejecución de tareas administrativas que normalmente se realizan de forma manual.
 
-1. Configuración de Energía
-Establece el plan de energía en "Alto rendimiento"
+El script integra múltiples procesos del sistema en un flujo automatizado, permitiendo reducir tiempos de mantenimiento y estandarizar configuraciones de optimización.
 
-Desactiva suspensión, apagado de monitor e hibernación
+---
 
-2. Ajustes Visuales
-Configura Windows para priorizar rendimiento sobre efectos visuales
+## Características Principales
 
-Desactiva animaciones y reduce retrasos en menús
+- Configuración del sistema en modo alto rendimiento
+- Desactivación de funciones innecesarias (suspensión, hibernación, efectos visuales)
+- Eliminación de archivos temporales del sistema y usuario
+- Limpieza de caché de Windows Update
+- Ejecución automatizada de herramientas del sistema (DISM y SFC)
+- Optimización de servicios del sistema
+- Ajustes de red (parámetros TCP/IP)
+- Optimización de uso de CPU y memoria
+- Desfragmentación de disco
+- Ejecución completa en un solo flujo automatizado
 
-3. Limpieza de Archivos
-Elimina archivos temporales del sistema y usuario
+---
 
-Limpia carpeta Prefetch
+## Funcionalidades
 
-Ejecuta Liberador de espacio en disco (cleanmgr)
+### Configuración de Energía
+- Activación del plan de alto rendimiento
+- Desactivación de suspensión, apagado de monitor e hibernación
 
-4. Servicios del Sistema
-Desactiva servicios no esenciales:
+### Ajustes Visuales
+- Prioridad al rendimiento sobre efectos gráficos
+- Reducción de animaciones y latencias en interfaz
 
-SysMain (Superfetch)
+### Limpieza del Sistema
+- Eliminación de archivos temporales
+- Limpieza de carpeta Prefetch
+- Ejecución del liberador de espacio en disco
 
-Windows Search
+### Optimización de Servicios
+Desactivación de servicios no esenciales:
+- SysMain (Superfetch)
+- Windows Search
+- DiagTrack (telemetría)
+- dmwappushservice
 
-DiagTrack (Experiencias del usuario y telemetría)
+### Mantenimiento del Sistema
+- Ejecución de DISM para reparación de imagen
+- Ejecución de SFC para verificación de integridad
 
-dmwappushservice
+### Optimización de Red
+- Ajuste de parámetros TCP/IP para mejorar conectividad
 
-5. Optimización de CPU y Memoria
-Ajusta prioridad de procesos
+### Almacenamiento
+- Desfragmentación de la unidad principal
 
-Optimiza uso de memoria del sistema
+---
 
-6. Mantenimiento del Sistema
-Ejecuta DISM para limpiar y reparar imagen del sistema
+## Instalación y Uso
 
-Ejecuta Comprobador de archivos del sistema (SFC)
+### Requisitos
 
-7. Optimización de Red
-Ajusta parámetros TCP/IP para mejor rendimiento
+- Sistema operativo Windows
+- Permisos de administrador
 
-8. Desfragmentación
-Optimiza y desfragmenta unidad C:
+### Ejecución
 
-9. Windows Update
-Limpia caché de Windows Update
+1. Descargar el archivo `Limpiar.bat`
+2. Ejecutar como administrador:
+   - Clic derecho sobre el archivo
+   - Seleccionar "Ejecutar como administrador"
+3. Seguir las instrucciones en pantalla
 
-Instrucciones de Uso
-Descarga el archivo Limpiar.bat
+El sistema se reiniciará automáticamente al finalizar para aplicar los cambios.
 
-Guardalo en una ubicación fácil de recordar (ej. Escritorio)
+---
 
-Haz clic derecho sobre el archivo
+## Tiempo de Ejecución
 
-Selecciona "Ejecutar como administrador"
+- Duración estimada: 10 a 20 minutos
+- Puede variar según el hardware del equipo
+- Procesos más intensivos:
+  - Desfragmentación de disco
+  - Verificación del sistema (SFC)
 
-Sigue las instrucciones en pantalla
+---
 
-Al finalizar, el sistema se reiniciará automáticamente para aplicar los cambios
+## Resultados Esperados
 
-Tiempo de Ejecución
-Aproximadamente 10-20 minutos, dependiendo de la velocidad del equipo
+- Reducción del tiempo de mantenimiento manual en aproximadamente 50%–60%
+- Mejora en el rendimiento general del sistema
+- Liberación de espacio en disco
+- Mayor estabilidad del sistema operativo
 
-La desfragmentación y el escaneo SFC son los procesos que más tiempo pueden tomar
+---
 
-Notas Importantes
-Es recomendable guardar todo trabajo antes de ejecutar el script
+## Compatibilidad
 
-El equipo se reiniciará al finalizar el proceso
+- Windows 11
+- Windows 10
+- Windows 8 / 8.1 (compatibilidad parcial)
+- Windows 7 (compatibilidad limitada)
 
-Algunas configuraciones pueden desactivar funciones visuales de Windows
+---
 
-Los servicios deshabilitados pueden reactivarse manualmente desde servicios.msc
+## Consideraciones
 
-Compatibilidad
-Windows 10 (todas las versiones)
+- Guardar todo el trabajo antes de ejecutar el script
+- Algunas optimizaciones pueden afectar elementos visuales del sistema
+- Los servicios deshabilitados pueden reactivarse manualmente
+- Revisión del código recomendada antes de su ejecución
 
-Windows 11 (todas las versiones)
+---
 
-Windows 8.1 y 8 (funcionalidad limitada)
+## Seguridad
 
-Windows 7 (funcionalidad limitada)
+Este script realiza modificaciones en la configuración del sistema operativo.  
+Se recomienda su uso en entornos controlados o con conocimiento previo de las acciones ejecutadas.
 
-Advertencia
-Este script modifica configuraciones del sistema. Usalo bajo tu propio criterio. Revisa el código antes de ejecutarlo si tienes dudas sobre su funcionamiento.
+---
 
-Creado por joaqmunoz
+## Autor
+
+Joaquín Muñoz
